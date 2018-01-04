@@ -19,12 +19,5 @@ There are many reasons to learn about the shell.
 >
 > #### Prerequisites
 >
-> This lesson uses data hosted on an Amazon Machine Instance (AMI). Workshop participants will be given information on how
-> to log-in to the AMI during the workshop. Learners using these materials for self-directed study will need to set up their own
-> AMI. Information on setting up an AMI and accessing the required data is provided on the [Genomics Workshop setup page](http://www.datacarpentry.org/genomics-workshop/setup/).
-{: .prereq}
-
-> ## For Instructors
-> If you are teaching this lesson in a workshop, please see the 
-> [Instructor notes](guide/).
+> Workshop participants should follow the instructions on the [workshop homepage] (https://liz-is.github.io/2018-01-29-maxplanck/) to set up their computers. For this lesson, you will need a Bash shell and this file (to be linked).
 {: .prereq}
