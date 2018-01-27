@@ -19,22 +19,12 @@ keypoints:
 
 ## Moving around the file system
 
-We've learned how to use `pwd` to find our current location within our file system. 
+We've learned how to use `pwd` to find our current location within our file system.
 We've also learned how to use `cd` to change locations and `ls` to list the contents
-of a directory. Now we're going to learn some additional commands for moving around 
+of a directory. Now we're going to learn some additional commands for moving around
 within our file system.
 
-Use the commands we've learned so far to navigate to the `dc_sample_data/untrimmed_fastq` directory, if
-you're not already there. 
-
-~~~
-$ cd
-$ cd dc_sample_data
-$ cd untrimmed_fastq
-~~~
-{: .bash}
-
-What if we want to move back up and out of this directory and to our top level 
+What if we want to move back up and out of this directory and to our top level
 directory? Can we type `cd dc_sample_data`? Try it and see what happens.
 
 ~~~
@@ -47,11 +37,11 @@ $ cd dc_sample_data
 ~~~
 {: .output}
 
-Your computer looked for a directory or file called `dc_sample_data` within the 
+Your computer looked for a directory or file called `dc_sample_data` within the
 directory you were already in. It didn't know you wanted to look at a directory level
-above the one you were located in. 
+above the one you were located in.
 
-We have a special command to tell the computer to move us back or up one directory level. 
+We have a special command to tell the computer to move us back or up one directory level.
 
 ~~~
 $ cd ..
@@ -67,10 +57,14 @@ $ pwd
 ~~~
 {: .bash}
 
+If you are not in `sample_data`, you might need to move up one more level:
+
 ~~~
-/home/dcuser/dc_sample_data
+$ cd ..
 ~~~
-{: .output}
+{: .bash}
+
+Once you are in `dc_sample_data`, confirm that its contents are what you expect:
 
 ~~~
 $ ls
@@ -82,7 +76,7 @@ sra_metadata  untrimmed_fastq
 ~~~
 {: .output}
 
-From this output, we can see that `..` did indeed take us back one level in our file system. 
+From this output, we can see that `..` did indeed take us back one level in our file system.
 
 You can chain these together like so:
 
@@ -91,57 +85,59 @@ $ ls ../../
 ~~~
 {: .bash}
 
-prints the contents of `/home`, which is one level up from your root directory. 
+prints the contents of whatever directory is two levels up from your current directory.
+
+Note also that `cd` alone will always take you to your "home" directory. In this lesson, "home" doesn't mean much, but getting back "home" can be very useful if you are, e.g., navigating around a computing cluster.
 
 > ## Finding hidden directories
 >
-> First navigate to the `dc_sample_data` directory. There is a hidden directory within this directory. Explore the options for `ls` to 
-> find out how to see hidden directories. List the contents of the directory and 
+> First navigate to the `dc_sample_data` directory. There is a hidden directory within this directory. Explore the options for `ls` to
+> find out how to see hidden directories. List the contents of the directory and
 > identify the name of the text file in that directory.
-> 
+>
 > Hint: hidden files and folders in Unix start with `.`, for example .my_hidden_directory
 >
 > > ## Solution
-> > 
-> > First use the `man` command to look at the options for `ls`. 
+> >
+> > First use the `man` command to look at the options for `ls`.
 > > ~~~
 > > $ man ls
 > > ~~~
 > > {: .bash}
-> > 
+> >
 > > The `-a` option is short for `all` and says that it causes `ls` to "not ignore
-> > entries starting with ." This is the option we want. 
-> > 
+> > entries starting with ." This is the option we want.
+> >
 > > ~~~
 > > $ ls -a
 > > ~~~
 > > {: .bash}
-> > 
+> >
 > > ~~~
 > > .  ..  .hidden	sra_metadata  untrimmed_fastq
 > > ~~~
 > > {: .output}
-> > 
+> >
 > > The name of the hidden directory is `.hidden`. We can navigate to that directory
-> > using `cd`. 
-> > 
+> > using `cd`.
+> >
 > > ~~~
 > > $ cd .hidden
 > > ~~~
 > > {: .bash}
-> > 
-> > And then list the contents of the directory using `ls`. 
-> > 
+> >
+> > And then list the contents of the directory using `ls`.
+> >
 > > ~~~
 > > $ ls
 > > ~~~
 > > {: .bash}
-> > 
+> >
 > > ~~~
 > > youfoundit.txt
 > > ~~~
 > > {: .output}
-> > 
+> >
 > > The name of the text file is `youfoundit.txt`.
 > {: .solution}
 {: .challenge}
@@ -188,10 +184,10 @@ This will take you to the `untrimmed_fastq` directory without having to go throu
 the intermediate directory.
 
 > ## Navigating practice
-> 
-> Navigate to your home directory. From there, list the contents of the `untrimmed_fastq` 
-> directory. 
-> 
+>
+> Navigate to your home directory. From there, list the contents of the `untrimmed_fastq`
+> directory.
+>
 > > ## Solution
 > >
 > > ~~~
@@ -199,12 +195,12 @@ the intermediate directory.
 > > $ ls dc_sample_data/untrimmed_fastq/
 > > ~~~
 > > {: .bash}
-> > 
+> >
 > > ~~~
-> > SRR097977.fastq  SRR098026.fastq 
+> > SRR097977.fastq  SRR098026.fastq
 > > ~~~
 > > {: .output}
-> > 
+> >
 > {: .solution}
 {: .challenge}
 
@@ -223,7 +219,7 @@ $ pwd
 ~~~
 {: .bash}
 
-You will see: 
+You will see:
 
 ~~~
 /home/dcuser
@@ -244,8 +240,8 @@ $ cd /home/dcuser/dc_sample_data/.hidden
 ~~~
 {: .bash}
 
-This jumps forward multiple levels to the `.hidden` directory. 
-Now go back to the home directory. 
+This jumps forward multiple levels to the `.hidden` directory.
+Now go back to the home directory.
 
 ~~~
 $ cd
@@ -281,17 +277,17 @@ structure of the directories that you are using and how to quickly
 navigate amongst them.
 
 > ## Relative path resolution
-> 
+>
 > Using the filesystem diagram below, if `pwd` displays `/Users/thing`,
 > what will `ls ../backup` display?
-> 
+>
 > 1.  `../backup: No such file or directory`
 > 2.  `2012-12-01 2013-01-08 2013-01-27`
 > 3.  `2012-12-01/ 2013-01-08/ 2013-01-27/`
 > 4.  `original pnas_final pnas_sub`
-> 
+>
 > ![File System for Challenge Questions](../fig/filesystem-challenge.svg)
-> 
+>
 > > ## Solution
 > >  1. No: there *is* a directory `backup` in `/Users`.
 > >  2. No: this is the content of `Users/thing/backup`,
@@ -300,7 +296,7 @@ navigate amongst them.
 > >    Also, we did not specify `-F` to display `/` at the end of the directory names.
 > >  4. Yes: `../backup` refers to `/Users/backup`.
 > {: .solution}
-{: .challenge} 
+{: .challenge}
 
 ### Navigational Shortcuts
 
@@ -327,7 +323,7 @@ dc_sample_data	FastQC	Trimmomatic-0.32
 ~~~
 {: .output}
 
-This prints the contents of your home directory, without you needing to 
-type the full path. 
+This prints the contents of your home directory, without you needing to
+type the full path.
 
 The commands `cd`, and `cd ~` are very useful for quickly navigating back to your home directory. We will be using the `~` character in later lessons to specify our home directory.
