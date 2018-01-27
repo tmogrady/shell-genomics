@@ -240,35 +240,23 @@ as a shortcut. When you start typing out the name of a directory or file, then
 hit the <kbd>Tab</kbd> key, the shell will try to fill in the rest of the
 directory or file name.
 
-For example, type `cd` to go back to your home directory, then enter:
+For example, enter:
 
 ~~~
-$ cd dc_sam<tab>
+$ cd ex<tab>
 ~~~
 {: .bash}
 
 The shell will fill in the rest of the directory name for
-`dc_sample_data`.
-
-Now change directories to `untrimmed_fastq` in `dc_sample_data`
-
-~~~
-$ cd dc_sample_data
-$ cd untrimmed_fastq
-~~~
-{: .bash}
+`extra_samples`.
 
 Using tab complete can be very helpful. However, it will only autocomplete
 a file or directory name if you've typed enough characters to provide
 a unique identifier for the file or directory you are trying to access.
 
-If we navigate back to our `untrimmed_fastq` directory and try to access one
-of our sample files:
+We can use tab complete with ls to look at files in the `extra_samples` folder:
 
 ~~~
-$ cd
-$ cd dc_sample_data
-$ cd untrimmed_fastq
 $ ls SR<tab>
 ~~~
 {: .bash}
@@ -283,12 +271,12 @@ $ ls SRR09<tab><tab>
 {: .bash}
 
 ~~~
-SRR097977.fastq  SRR098026.fastq
+SRR098027.fastq  SRR098032.fastq
 ~~~
 {: .output}
 
 Tab completion can also fill in the names of programs, which can be useful if you
-remember the begining of a program name.
+remember the beginning of a program name.
 
 ~~~
 $ pw<tab><tab>
