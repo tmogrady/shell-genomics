@@ -210,7 +210,7 @@ The `cd` command takes an argument which is a directory
 name. Directories can be specified using either a *relative* path or a
 full *absolute* path. The directories on the computer are arranged into a
 hierarchy. The full path tells you where a directory is in that
-hierarchy. Navigate to the home directory, then enter the `pwd`
+hierarchy. Navigate to the `dc_sample_data` then enter the `pwd`
 command.
 
 ~~~
@@ -219,34 +219,28 @@ $ pwd
 ~~~
 {: .bash}
 
-You will see:
+This is the full name of your home directory. For example, you might see something that looks like this:
 
 ~~~
 /home/dcuser
 ~~~
 {: .output}
 
-This is the full name of your home directory. This tells you that you
-are in a directory called `dcuser`, which sits inside a directory called
-`home` which sits inside the very top directory in the hierarchy. The
-very top of the hierarchy is a directory called `/` which is usually
-referred to as the *root directory*. So, to summarize: `dcuser` is a
-directory in `home` which is a directory in `/`.
+ The example above tells you that you are in a directory called `dcuser`, which
+ sits inside a directory called `home` which sits inside the very top directory
+ in the hierarchy. The very top of the hierarchy is a directory called `/` which
+ is usually referred to as the *root directory*. So, to summarize: `dcuser` is a
+ directory in `home` which is a directory in `/`.
 
-Now enter the following command:
+Using the example above, you could enter the following command:
 
 ~~~
 $ cd /home/dcuser/dc_sample_data/.hidden
 ~~~
 {: .bash}
 
-This jumps forward multiple levels to the `.hidden` directory.
-Now go back to the home directory.
-
-~~~
-$ cd
-~~~
-{: .bash}
+to jump forward multiple levels to the `.hidden` directory.
+Now go back to the `for_shell` directory.
 
 You can also navigate to the `.hidden` directory using:
 
@@ -254,7 +248,6 @@ You can also navigate to the `.hidden` directory using:
 $ cd dc_sample_data/.hidden
 ~~~
 {: .bash}
-
 
 These two commands have the same effect, they both take us to the `.hidden` directory.
 The first uses the absolute path, giving the full address from the home directory. The
@@ -302,28 +295,14 @@ navigate amongst them.
 
 There are some shortcuts which you should know about. Dealing with the
 home directory is very common. The tilde character,
-`~`, is a shortcut for your home directory. Navigate to the `dc_sample_data`
-directory:
-
-~~~
-$ cd
-$ cd dc_sample_data
-~~~
-{: .bash}
-
-Then enter the command:
+`~`, is a shortcut for your home directory. For example, the command:
 
 ~~~
 $ ls ~
 ~~~
 {: .bash}
 
-~~~
-dc_sample_data	FastQC	Trimmomatic-0.32
-~~~
-{: .output}
-
-This prints the contents of your home directory, without you needing to
+prints the contents of your home directory, without you needing to
 type the full path.
 
 The commands `cd`, and `cd ~` are very useful for quickly navigating back to your home directory. We will be using the `~` character in later lessons to specify our home directory.
