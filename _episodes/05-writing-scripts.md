@@ -226,5 +226,3 @@ $ ./bad-reads-script.sh
 {: .bash}
 
 The script should run the same way as before, but now we've created our very own computer program!
-
-You will learn more about writing scripts in [a later lesson](http://www.datacarpentry.org/wrangling-genomics/02-automating_a_workflow/).
