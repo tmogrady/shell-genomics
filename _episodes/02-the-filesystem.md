@@ -165,20 +165,17 @@ you needing to navigate there.
 
 The `cd` command works in a similar way.
 
-Try entering:
-
 ~~~
-$ cd
 $ cd dc_sample_data/untrimmed_fastq
 ~~~
 {: .bash}
 
-This will take you to the `untrimmed_fastq` directory without having to go through
-the intermediate directory.
+will take you from the `for_shell` directory to the `untrimmed_fastq` directory
+without having to go through the intermediate directory.
 
 > ## Navigating practice
 >
-> Navigate to your home directory. From there, list the contents of the `untrimmed_fastq`
+> Navigate to `for_shell`. From there, list the contents of the `untrimmed_fastq`
 > directory.
 >
 > > ## Solution
