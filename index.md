@@ -14,10 +14,10 @@ There are many reasons to learn about the shell.
 > ## Getting Started
 >
 > Data Carpentry's teaching is hands-on, so participants are encouraged to use
-> their own computers to ensure the proper setup of tools for an efficient 
+> their own computers to ensure the proper setup of tools for an efficient
 > workflow. <br>**These lessons assume no prior knowledge of the skills or tools.**
 >
 > #### Prerequisites
 >
-> Workshop participants should follow the instructions on the [workshop homepage](https://liz-is.github.io/2018-01-29-maxplanck/) to set up their computers. For this lesson, you will need a Bash shell and this file (to be linked).
+> Workshop participants should follow the instructions on the [workshop homepage](https://liz-is.github.io/2018-01-29-maxplanck/) to set up their computers. For this lesson, you will need a Bash shell and [this file](data/for_shell.zip) (to be linked).
 {: .prereq}
