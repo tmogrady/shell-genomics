@@ -22,7 +22,7 @@ keypoints:
 
 ### Our data set: FASTQ files
 
-Now that we know how to navigate around our directory structure, lets
+Now that we know how to navigate around our directory structure, let's
 start working with our sequencing files. We did a sequencing experiment and
 have two results files, which are stored in our `untrimmed_fastq` directory.
 
