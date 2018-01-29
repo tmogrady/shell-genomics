@@ -181,7 +181,6 @@ without having to go through the intermediate directory.
 > > ## Solution
 > >
 > > ~~~
-> > $ cd
 > > $ ls dc_sample_data/untrimmed_fastq/
 > > ~~~
 > > {: .bash}
@@ -204,7 +203,6 @@ hierarchy. Navigate to the `dc_sample_data` then enter the `pwd`
 command.
 
 ~~~
-$ cd  
 $ pwd  
 ~~~
 {: .bash}
