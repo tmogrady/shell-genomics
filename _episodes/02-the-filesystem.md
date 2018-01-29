@@ -144,7 +144,7 @@ Note also that `cd` alone will always take you to your "home" directory. In this
 
 ## Examining the contents of other directories
 
-By default, the `ls` commands lists the contents of the working
+By default, the `ls` command lists the contents of the working
 directory (i.e. the directory you are in). You can always find the
 directory you are in using the `pwd` command. However, you can also
 give `ls` the names of other directories to view. Navigate to your
