@@ -126,7 +126,7 @@ $ pwd
 
 Now, let's look at how our file system is organized.  
 
-At the top is our `dcuser` directory, which holds all the
+At the top is our `for_shell` directory, which holds all the
 subdirectories and files.
 
 Inside that directory are some other directories:
