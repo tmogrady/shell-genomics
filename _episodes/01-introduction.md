@@ -113,7 +113,7 @@ The exact command will differ depending on where you saved the file, but it will
 look something like this:
 
 ~~~
-$ cd cd Desktop/for_shell/
+$ cd Desktop/for_shell/
 ~~~
 {: .bash}
 
